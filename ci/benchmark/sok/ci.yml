@@ -1,0 +1,9 @@
+
+sok--65536x1:
+  extends:
+    - .sok_benchmark
+    - .benchmark:rules:weekly
+sok--65536x8:
+  extends:
+    - .sok_benchmark
+    - .benchmark:rules:biweekly

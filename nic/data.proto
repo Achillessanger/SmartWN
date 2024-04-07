@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message Data {
+    int32 rsize = 1;
+    string content = 2;
+    int32 inverval = 3;
+}
