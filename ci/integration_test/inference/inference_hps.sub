@@ -1,8 +1,0 @@
-#!/bin/bash
-
-srun --ntasks="${SLURM_JOB_NUM_NODES}" --container-image="${CONT}" --container-mounts="${MOUNTS}" bash -cx " \
-      cd /dataset/criteo_kaggle/dcn && \
-      python3 /workdir/test/inference/hps/lookup_session_test.py hps_lookup /hugectr/test/utest/wdl_test_files/wdl0_sparse_2000.model,/hugectr/test/utest/wdl_test_files/wdl1_sparse_2000.model  /hugectr/test/utest/wdl_test_files/first_ten.csv && \
-      pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118 && \
-      pip install tensorflow && \
-      python3 /workdir/test/inference/hps/hpsdlpack.py hpsdlpack /hugectr/test/utest/wdl_test_files/wdl0_sparse_2000.model,/hugectr/test/utest/wdl_test_files/wdl1_sparse_2000.model  /hugectr/test/utest/wdl_test_files/first_ten.csv"

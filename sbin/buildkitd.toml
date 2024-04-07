@@ -1,3 +1,0 @@
-[registry."nvidia.com"]
-  mirrors = ["dockerhub.nvidia.com","dockerhub-backup.nvidia.com"]
-
